@@ -1,0 +1,6 @@
+/vendor/
+/web/
+/content/plugins/
+/content/upgrade/
+/wp-config.php
+/assets

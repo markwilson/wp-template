@@ -1,0 +1,49 @@
+{
+    "name": "markwilson/wp-template",
+    "description": "WordPress template",
+    "version": "1.0.0",
+    "license": "MIT",
+    "type": "wordpress",
+    "authors": [{
+        "name": "Mark Wilson",
+        "email": "mark@89allport.co.uk"
+    }],
+    "require": {
+        "wordpress"                    : "4.1.1",
+        "fancyguy/webroot-installer"   : "1.0.0",
+        "markwilson/wp-composer-plugin": "1.0.2"
+    },
+    "require-dev" : {
+        "wpackagist-plugin/debug-bar" : "0.8.*"
+    },
+    "repositories": [{
+        "type" : "composer",
+        "url"  : "http://wpackagist.org"
+    }, {
+        "type"    : "package",
+        "package" : {
+            "name"    : "wordpress",
+            "type"    : "webroot",
+            "version" : "4.1.1",
+            "dist"    : {
+                "url"  : "https://github.com/WordPress/WordPress/archive/4.1.1.zip",
+                "type" : "zip"
+            },
+            "source" : {
+                "url"       : "https://github.com/WordPress/WordPress",
+                "type"      : "git",
+                "reference" : "4.1.1"
+            },
+            "require": {
+                "fancyguy/webroot-installer" : "1.0.0"
+            }
+        }
+    }],
+    "extra" : {
+        "installer-paths" : {
+            "content/plugins/{$name}/" : ["type:wordpress-plugin"]
+        },
+        "webroot-dir"     : "web",
+        "webroot-package" : "wordpress"
+    }
+}
